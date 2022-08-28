@@ -10,6 +10,7 @@ export class ProductListComponent {
   pageTitle = 'Product List';
   imageWidth = 50;
   imageMargin = 2; 
+  listFilter= 'card'
   showImage = false;
   products : any[] =
   [
