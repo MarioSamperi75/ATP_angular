@@ -1,15 +1,16 @@
 import { Component } from "@angular/core";
 
-
 @Component ({
   selector: 'pm-products',
   templateUrl :'./product-list.component.html'
 })
 
-
 export class ProductListComponent {
 
-  pageTitle: string = 'Product List';
+  pageTitle = 'Product List';
+  imageWidth = 50;
+  imageMargin = 2; 
+  showImage = false;
   products : any[] =
   [
     {
@@ -62,6 +63,10 @@ export class ProductListComponent {
       "starRating": 4.6,
       "imageUrl": "assets/images/xbox-controller.png"
     }
-  ]
+  ];
 
+  toggleImage () : void {
+    this.showImage = !this.showImage
+    console.log(this.showImage);
+  }
 }
